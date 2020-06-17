@@ -1,0 +1,15 @@
+easy_admin:
+    entities:
+        Article:
+            class: App\Entity\Article
+            form:
+                fields:
+                    - { property: 'Titre'}
+                    - { property: 'SousTitre'}
+                    - { property: 'Texte', type: 'fos_ckeditor'}
+                    - { property: 'Image'}
+    design:
+        form_theme:
+            - '@EasyAdmin/form/bootstrap_4.html.twig'
+            - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
+
