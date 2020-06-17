@@ -23,8 +23,8 @@ class MainController extends AbstractController
      */
     public function index(): Response
     {
-       
-        return $this->render('index/index.html.twig');
+
+        return $this->render('index/blog.html.twig');
 
     }
 
@@ -34,9 +34,9 @@ class MainController extends AbstractController
      */
     public function news(): Response
     {
-       
+
         return $this->render('index/news.html.twig');
-        
+
 
     }
 

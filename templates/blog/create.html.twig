@@ -1,0 +1,41 @@
+{% extends ('base.html.twig') %}
+    {% block body %}
+
+        <h1>Création d'un article</h1>
+
+        {{ form_start(form) }}
+
+{#     soit utilier form_row soit form_widget, je crois que tu peut faire encore autrement #}
+{#        les deux boutons marche à toi de choisir#}
+
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                {{ form_row(form.Titre) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                {{ form_row(form.SousTitre) }}
+            </div>
+        </div>
+        <div class="row message ">
+            <div class="col-12  form-size">
+                {{ form_row(form.Texte) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                {{ form_row(form.Image) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 ">
+                <button type="submit" class="btn btn-primary btn-md">Envoyer le message</button>
+            </div>
+        </div>
+        </div>
+
+        {{ form_end(form) }}
+
+
+    {% endblock body %}

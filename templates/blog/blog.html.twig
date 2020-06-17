@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BlogController!{% endblock %}
+
+{% block body %}
+
+    {% for article in articles %}
+        {{ article.Titre }}
+        {{ article.SousTitre }}
+        {{ article.Texte|raw }}
+        {{ article.image }}
+    {% endfor %}
+
+{% endblock %}
