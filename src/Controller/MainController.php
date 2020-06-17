@@ -37,7 +37,7 @@ class MainController extends AbstractController
     public function muzik(): Response
     {
 
-        return $this->render('muzik.html.twig');
+        return $this->render('index/muzik.html.twig');
     }
 
 
