@@ -17,10 +17,12 @@
         "symfony/maker-bundle": "^1.19",
         "symfony/orm-pack": "^1.0",
         "symfony/requirements-checker": "^1.1",
+        "symfony/security-bundle": "5.0.*",
         "symfony/twig-pack": "^1.0",
         "symfony/yaml": "5.0.*"
     },
     "require-dev": {
+        "symfony/profiler-pack": "^1.0"
     },
     "config": {
         "preferred-install": {

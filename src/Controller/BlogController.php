@@ -12,14 +12,14 @@ use Symfony\Component\Routing\Annotation\Route;
 class BlogController extends AbstractController
 {
     /**
-     * @Route("/blog", name="blog")
+     * @Route("/news", name="news")
      *
      */
 
     public function show(){
         $repo = $this->getDoctrine()->getRepository(Article::class);
         $article = $repo->findAll();
-        return $this->render('blog/blog.html.twig', [
+        return $this->render('index/news.html.twig', [
             'articles' => $article]);
     }
     /**
