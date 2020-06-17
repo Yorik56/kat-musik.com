@@ -10,6 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
+
 /**
  * @Route("/")
  */
@@ -26,6 +27,17 @@ class MainController extends AbstractController
 
         return $this->render('index/index.html.twig');
 
+    }
+
+    /**
+     * @Route("/muzik", name="muzik")
+     * @return Response
+     *
+     */
+    public function muzik(): Response
+    {
+
+        return $this->render('index/muzik.html.twig');
     }
 
 
