@@ -29,16 +29,4 @@ class MainController extends AbstractController
 
     }
 
-    /**
-     * @Route("/muzik", name="muzik")
-     * @return Response
-     *
-     */
-    public function muzik(): Response
-    {
-
-        return $this->render('index/muzik.html.twig');
-    }
-
-
 }
