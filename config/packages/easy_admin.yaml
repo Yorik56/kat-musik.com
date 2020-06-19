@@ -2,12 +2,20 @@ easy_admin:
     entities:
         Article:
             class: App\Entity\Article
+            list:
+                fields:
+                    - { property: 'Titre'}
+                    - { property: 'SousTitre'}
+                    - { property: 'Texte'}
+                    - { property: 'image', type: 'image', base_path: 'imagesArticles' }
+                    - { property: 'Date' }
             form:
                 fields:
                     - { property: 'Titre'}
                     - { property: 'SousTitre'}
                     - { property: 'Texte', type: 'fos_ckeditor'}
-                    - { property: 'Image'}
+                    - { property: 'imageFile', type: 'file', base_path: 'imagesArticles' }
+                    - { property: 'Date' }
     design:
         form_theme:
             - '@EasyAdmin/form/bootstrap_4.html.twig'

@@ -104,6 +104,12 @@
       <path value="$PROJECT_DIR$/vendor/pagerfanta/pagerfanta" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/profiler-pack" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1dOrTDyy0ybfymeMGiF7qHcHwfK" />
@@ -115,7 +121,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/security" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\kat-musik.com\templates\security" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -129,7 +141,9 @@
       <updated>1592306985663</updated>
       <workItem from="1592306986960" duration="1159000" />
       <workItem from="1592385778410" duration="7838000" />
-      <workItem from="1592403586583" duration="3274000" />
+      <workItem from="1592403586583" duration="4843000" />
+      <workItem from="1592490613702" duration="19000" />
+      <workItem from="1592552248672" duration="12215000" />
     </task>
     <servers />
   </component>
@@ -137,10 +151,15 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1382" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592393466081">
-      <screen x="-1842" y="0" width="1458" height="864" />
+    <state x="861" y="261" key="#com.intellij.ide.util.MemberChooser" timestamp="1592563252370">
+      <screen x="62" y="0" width="1986" height="1152" />
+    </state>
+    <state x="861" y="261" key="#com.intellij.ide.util.MemberChooser/62.0.1986.1152/-1842.0.1458.864@62.0.1986.1152" timestamp="1592563252370" />
+    <state x="689" y="249" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592554502905">
+      <screen x="62" y="0" width="1986" height="1152" />
     </state>
     <state x="-1382" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1592393466081" />
+    <state x="689" y="249" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/62.0.1986.1152/-1842.0.1458.864@62.0.1986.1152" timestamp="1592554502905" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1592393549369">
       <screen x="-1842" y="0" width="1458" height="864" />
     </state>
