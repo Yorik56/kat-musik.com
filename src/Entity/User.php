@@ -64,13 +64,11 @@ class User implements UserInterface
     /**
      * @see UserInterface
      */
-    public function getRoles(): array
-    {
-        $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
-
-        return array_unique($roles);
+    public function getRoles() {
+        if (empty($this->roles)) {
+            return ['ROLE_ADMIN'];
+        }
+        return $this->roles;
     }
 
     public function setRoles(array $roles): self
@@ -83,9 +81,9 @@ class User implements UserInterface
     /**
      * @see UserInterface
      */
-    public function getPassword(): string
+    public function getPassword(): ?string
     {
-        return (string) $this->password;
+        return  $this->password;
     }
 
     public function setPassword(string $password): self
@@ -100,7 +98,7 @@ class User implements UserInterface
      */
     public function getSalt()
     {
-        // not needed when using the "bcrypt" algorithm in security.yaml
+
     }
 
     /**
@@ -111,4 +109,11 @@ class User implements UserInterface
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
     }
+
+    public function __toString()
+    {
+        return $this->email;
+    }
+
+
 }
