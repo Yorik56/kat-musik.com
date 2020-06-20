@@ -31,9 +31,10 @@
 
 
 						{% for music in musics %}
-							<h3>Soundcloud Embed</h3>
+							<h3>{{ music.titre }}</h3>
 
 							{{ music.embed|raw }}
+							
 
 							<div class="divider"><i class="icon-circle"></i></div>
 						{% endfor %}

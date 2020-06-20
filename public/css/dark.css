@@ -148,8 +148,8 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 .dark #header-wrap:not(.not-dark) #side-panel-trigger a:hover,
 .dark #header-wrap:not(.not-dark) #top-account a:hover,
 .dark #header-wrap:not(.not-dark) #top-search form input {
-	color: white;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+	color: rgba(255,255,255,0.7);
+	text-shadow: 5px 2px 3px #2E3192;
 }
 
 .dark #header.full-header #header-wrap:not(.not-dark) #primary-menu > ul,
@@ -168,7 +168,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 .dark #header-wrap:not(.not-dark) #primary-menu > ul > li:hover > a,
 .dark #header-wrap:not(.not-dark) #primary-menu > ul > li.current > a,
 .dark #header-wrap:not(.not-dark) #primary-menu > .container > ul > li:hover > a,
-.dark #header-wrap:not(.not-dark) #primary-menu > .container > ul > li.current > a { color: #EEE; }
+.dark #header-wrap:not(.not-dark) #primary-menu > .container > ul > li.current > a { color: #2E3192;text-shadow: 0px 0px 5px rgba(255,255,255); }
 
 .dark.overlay-menu #header-wrap:not(.not-dark) #primary-menu > ul > li:hover > a,
 .dark.overlay-menu #header-wrap:not(.not-dark) #primary-menu > ul > li.current > a,

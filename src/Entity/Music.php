@@ -18,7 +18,7 @@ class Music
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=1500)
      */
     private $Embed;
 
