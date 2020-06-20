@@ -1,4 +1,7 @@
 easy_admin:
+    site_name: 'Kat'
+    formats:
+        time: 'h:i:s'
     entities:
         Article:
             class: App\Entity\Article
@@ -25,6 +28,26 @@ easy_admin:
                 fields:
                     - { property: 'Embed'}
                     - { property: 'Titre'}
+        Envent:
+            class: App\Entity\Event
+            list:
+                fields:
+                    - { property: 'Date', type: 'date'}
+                    - { property: 'Horaire' }
+                    - { property: 'Lieu'}
+                    - { property: 'Titre' }
+                    - { property: 'Presentation' }
+                    - { property: 'Info'}
+                    - { property: 'Billeterie'}
+            form:
+                fields:
+                    - { property: 'Date', type: 'date'}
+                    - { property: 'Horaire', type: 'time' }
+                    - { property: 'Lieu'}
+                    - { property: 'Titre' }
+                    - { property: 'Presentation' }
+                    - { property: 'Info'}
+                    - { property: 'Billeterie'}
     design:
         form_theme:
             - '@EasyAdmin/form/bootstrap_4.html.twig'

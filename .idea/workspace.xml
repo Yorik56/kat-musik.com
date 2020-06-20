@@ -110,6 +110,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/templating" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
       <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
     </include_path>
   </component>
   <component name="ProjectId" id="1dOrTDyy0ybfymeMGiF7qHcHwfK" />
@@ -144,7 +145,8 @@
       <workItem from="1592403586583" duration="4843000" />
       <workItem from="1592490613702" duration="19000" />
       <workItem from="1592552248672" duration="13813000" />
-      <workItem from="1592649161199" duration="2945000" />
+      <workItem from="1592649161199" duration="5759000" />
+      <workItem from="1592663609148" duration="4261000" />
     </task>
     <servers />
   </component>
@@ -156,11 +158,11 @@
       <screen x="62" y="0" width="1986" height="1152" />
     </state>
     <state x="861" y="261" key="#com.intellij.ide.util.MemberChooser/62.0.1986.1152/-1842.0.1458.864@62.0.1986.1152" timestamp="1592563252370" />
-    <state x="689" y="249" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592554502905">
+    <state x="689" y="249" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592667386652">
       <screen x="62" y="0" width="1986" height="1152" />
     </state>
     <state x="-1382" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1592393466081" />
-    <state x="689" y="249" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/62.0.1986.1152/-1842.0.1458.864@62.0.1986.1152" timestamp="1592554502905" />
+    <state x="689" y="249" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/62.0.1986.1152/-1842.0.1458.864@62.0.1986.1152" timestamp="1592667386652" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1592393549369">
       <screen x="-1842" y="0" width="1458" height="864" />
     </state>
@@ -169,5 +171,9 @@
       <screen x="-1842" y="0" width="1458" height="864" />
     </state>
     <state x="-1419" y="164" width="611" height="536" key="find.popup/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1592393965818" />
+    <state x="-1450" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1592664544729">
+      <screen x="-1842" y="0" width="1458" height="864" />
+    </state>
+    <state x="-1450" y="181" width="672" height="678" key="search.everywhere.popup/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1592664544729" />
   </component>
 </project>
