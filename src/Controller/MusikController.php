@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Article;
+use App\Entity\Music;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,7 +18,10 @@ class MusikController extends AbstractController
      */
     public function musik()
     {
-        return $this->render('index/musik.html.twig');
+        $repo = $this->getDoctrine()->getRepository(Music::class);
+        $music = $repo->findAll();
+        return $this->render('index/musik.html.twig', [
+            'musics' => $music]);
     }
 
 }
