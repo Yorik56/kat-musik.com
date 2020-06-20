@@ -6,6 +6,7 @@ use App\Entity\Article;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
+
 class BlogController extends AbstractController
 {
     /**
@@ -13,6 +14,7 @@ class BlogController extends AbstractController
      *
      */
     public function show(){
+        $twig->addExtension(new Twig_Extensions_Extension_Intl());
         $repo = $this->getDoctrine()->getRepository(Article::class);
         $article = $repo->findAll();
         return $this->render('index/news.html.twig', [
