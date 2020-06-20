@@ -16,6 +16,15 @@ easy_admin:
                     - { property: 'Texte', type: 'fos_ckeditor'}
                     - { property: 'imageFile', type: 'file', base_path: 'imagesArticles' }
                     - { property: 'Date' }
+        Music:
+            class: App\Entity\Music
+            list:
+                fields:
+                    - { property: 'Titre'}
+            form:
+                fields:
+                    - { property: 'Embed'}
+                    - { property: 'Titre'}
     design:
         form_theme:
             - '@EasyAdmin/form/bootstrap_4.html.twig'
