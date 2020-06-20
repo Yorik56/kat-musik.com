@@ -1,4 +1,4 @@
-{% extends ('base.html.twig') %} 
+{% extends ('base.html.twig') %}
     {% block body %}
 
 		<!-- Page Title
@@ -26,97 +26,33 @@
 
 					<div id="posts" class="events small-thumbs">
 
+						{% for event in events %}
+
 						<div class="entry clearfix">
 							<div class="entry-image">
 								<a href="#">
 									<img src="images/events/thumbs/1.jpg" alt="Inventore voluptates velit totam ipsa tenetur">
-									<div class="entry-date">10<span>Apr</span></div>
+									<div class="entry-date">{{event.date|date("m/d/Y")}}</div>
 								</a>
 							</div>
 							<div class="entry-c">
 								<div class="entry-title">
-									<h2><a href="#">Inventore voluptates velit totam ipsa tenetur</a></h2>
+									<h2><a href="#">{{event.titre}}</a></h2>
 								</div>
 								<ul class="entry-meta clearfix">
 									<li><span class="badge badge-warning">Private</span></li>
-									<li><a href="#"><i class="icon-time"></i> 11:00 - 19:00</a></li>
-									<li><a href="#"><i class="icon-map-marker2"></i> Melbourne, Australia</a></li>
+									<li><a href="#"><i class="icon-time"></i>{{event.horaire|date("h:i")}}</a></li>
+									<li><a href="#"><i class="icon-map-marker2"></i>{{event.lieu}}</a></li>
 								</ul>
 								<div class="entry-content">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur voluptate rerum molestiae eaque possimus exercitationem eligendi fuga.</p>
-									<a href="#" class="btn btn-secondary" disabled="disabled">Buy Tickets</a> <a href="#" class="btn btn-danger">Read More</a>
+									<p>{{ event.presentation }}</p>
+									<a href="#" class="btn btn-secondary" disabled="disabled">{{event.billeterie}}</a> <a href="#" class="btn btn-danger">{{event.info}}</a>
 								</div>
 							</div>
 						</div>
 
-						<div class="entry clearfix">
-							<div class="entry-image">
-								<a href="#">
-									<img src="images/events/thumbs/2.jpg" alt="Nemo quaerat nam beatae iusto minima vel">
-									<div class="entry-date">16<span>Apr</span></div>
-								</a>
-							</div>
-							<div class="entry-c">
-								<div class="entry-title">
-									<h2><a href="#">Nemo quaerat nam beatae iusto minima vel</a></h2>
-								</div>
-								<ul class="entry-meta clearfix">
-									<li><span class="badge badge-danger">Urgent</span></li>
-									<li><a href="#"><i class="icon-time"></i> 11:00 - 19:00</a></li>
-									<li><a href="#"><i class="icon-map-marker2"></i> Perth, Australia</a></li>
-								</ul>
-								<div class="entry-content">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur voluptate rerum molestiae eaque possimus exercitationem eligendi fuga.</p>
-									<a href="#" class="btn btn-info">RSVP</a> <a href="#" class="btn btn-danger">Read More</a>
-								</div>
-							</div>
-						</div>
+						{% endfor %}
 
-						<div class="entry clearfix">
-							<div class="entry-image">
-								<a href="#">
-									<img src="images/events/thumbs/3.jpg" alt="Ducimus ipsam error fugiat harum recusandae">
-									<div class="entry-date">3<span>May</span></div>
-								</a>
-							</div>
-							<div class="entry-c">
-								<div class="entry-title">
-									<h2><a href="#">Ducimus ipsam error fugiat harum recusandae</a></h2>
-								</div>
-								<ul class="entry-meta clearfix">
-									<li><span class="badge badge-info">Public</span></li>
-									<li><a href="#"><i class="icon-time"></i> 11:00 - 19:00</a></li>
-									<li><a href="#"><i class="icon-map-marker2"></i> Melbourne, Australia</a></li>
-								</ul>
-								<div class="entry-content">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur voluptate rerum molestiae eaque possimus exercitationem eligendi fuga.</p>
-									<a href="#" class="btn btn-secondary">Buy Tickets</a> <a href="#" class="btn btn-danger">Read More</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="entry clearfix">
-							<div class="entry-image">
-								<a href="#">
-									<img src="images/events/thumbs/4.jpg" alt="Nisi officia adipisci molestiae aliquam">
-									<div class="entry-date">16<span>Jun</span></div>
-								</a>
-							</div>
-							<div class="entry-c">
-								<div class="entry-title">
-									<h2><a href="#">Nisi officia adipisci molestiae aliquam</a></h2>
-								</div>
-								<ul class="entry-meta clearfix">
-									<li><span class="badge badge-warning">Private</span></li>
-									<li><a href="#"><i class="icon-time"></i> 12:00 - 18:00</a></li>
-									<li><a href="#"><i class="icon-map-marker2"></i> New York</a></li>
-								</ul>
-								<div class="entry-content">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur voluptate rerum molestiae eaque possimus exercitationem eligendi fuga.</p>
-									<a href="#" class="btn btn-info">RSVP</a> <a href="#" class="btn btn-danger">Read More</a>
-								</div>
-							</div>
-						</div>
 
 					</div>
 

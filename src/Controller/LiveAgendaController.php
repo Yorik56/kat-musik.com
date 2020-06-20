@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Entity\Article;
+use App\Entity\Event;
+use App\Entity\Music;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,7 +19,10 @@ class LiveAgendaController extends AbstractController
      */
     public function liveagenda()
     {
-        return $this->render('index/liveagenda.html.twig');
+        $repo = $this->getDoctrine()->getRepository(Event::class);
+        $event = $repo->findAll();
+        return $this->render('index/liveagenda.html.twig', [
+            'events' => $event]);
     }
 
 }
