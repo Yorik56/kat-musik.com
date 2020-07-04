@@ -23,11 +23,14 @@ class MusikController extends AbstractController
        $repo = $this->getDoctrine()->getRepository(Music::class);
         $music = $repo->findAll();
         $article = $this->getDoctrine()->getRepository(Article::class)->LastArticle();
-
-
+        $lastvideo = $this->getDoctrine()->getRepository(Video::class)->LastVideo();
+        $nextconcert = $this->getDoctrine()->getRepository(Event::class)->NextConcert();
         return $this->render('index/musik.html.twig', [
             'musics' => $music,
             'articles' => $article,
+            'lastvideos' => $lastvideo,
+            'nextconcerts'=> $nextconcert,
+
             ]);
     }
 
@@ -37,15 +40,21 @@ class MusikController extends AbstractController
 
 
     /**
-     * @Route("/video", name="videok")
+     * @Route("/video", name="video")
      *
      */
     public function video()
     {
         $repo = $this->getDoctrine()->getRepository(Video::class);
         $video = $repo->findAll();
+        $music = $this->getDoctrine()->getRepository(Music::class)->LastMusic();
+        $article = $this->getDoctrine()->getRepository(Article::class)->LastArticle();
+        $nextconcert = $this->getDoctrine()->getRepository(Event::class)->NextConcert();
         return $this->render('index/video.html.twig', [
-            'videos' => $video]);
+            'videos' => $video,
+            'musics' => $music,
+            'articles' => $article,
+            'nextconcerts'=> $nextconcert,]);
     }
 
 

@@ -1,75 +1,143 @@
 {% extends ('base.html.twig') %}
     {% block body %}
 
-		<!-- Page Title
-		============================================= -->
-		<section id="page-title">
+        <!-- Page Title
+        ============================================= -->
+        <section id="page-title">
 
-			<div class="container clearfix">
-				<h1>Events List</h1>
-				<span>Showcase of Events in Full Width Layout</span>
-				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="#">Home</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Events</li>
-				</ol>
-			</div>
+            <div class="container clearfix">
+                <h1>Events List</h1>
+                <span>Showcase of Events in Full Width Layout</span>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Events</li>
+                </ol>
+            </div>
 
-		</section><!-- #page-title end -->
+        </section><!-- #page-title end -->
 
-		<!-- Content
-		============================================= -->
-		<section id="content">
+        <!-- Content
+        ============================================= -->
+        <section id="content">
 
-			<div class="content-wrap">
+            <div class="content-wrap">
 
-				<div class="container clearfix">
+                <div class="container clearfix">
 
-					<div id="posts" class="events small-thumbs">
-
-						{% for event in events %}
-
-						<div class="entry clearfix">
-							<div class="entry-image">
-								<a href="#">
-									<img src="images/events/thumbs/1.jpg" alt="Inventore voluptates velit totam ipsa tenetur">
-									<div class="entry-date">{{event.date|date("m/d/Y")}}</div>
-								</a>
-							</div>
-							<div class="entry-c">
-								<div class="entry-title">
-									<h2><a href="#">{{event.titre}}</a></h2>
-								</div>
-								<ul class="entry-meta clearfix">
-									<li><span class="badge badge-warning">Private</span></li>
-									<li><a href="#"><i class="icon-time"></i>{{event.horaire|date("h:i")}}</a></li>
-									<li><a href="#"><i class="icon-map-marker2"></i>{{event.lieu}}</a></li>
-								</ul>
-								<div class="entry-content">
-									<p>{{ event.presentation }}</p>
-									<a href="#" class="btn btn-secondary" disabled="disabled">{{event.billeterie}}</a> <a href="#" class="btn btn-danger">{{event.info}}</a>
-								</div>
-							</div>
-						</div>
-
-						{% endfor %}
+                    <div id="posts" class="events small-thumbs">
+                        <div class="postcontent nobottommargin clearfix">
 
 
-					</div>
+                            {% for event in events %}
 
-					<!-- Pagination
-					============================================= -->
-					<div class="row mb-3">
-						<div class="col-12">
-							<a href="#" class="btn btn-outline-secondary float-left">&larr; Older</a>
-							<a href="#" class="btn btn-outline-dark float-right">Newer &rarr;</a>
-						</div>
-					</div>
-					<!-- .pager end -->
+                                <div class="entry clearfix">
+                                    <div class="entry-image">
+                                        <a href="#">
+                                            <img src="images/events/thumbs/1.jpg"
+                                                 alt="Inventore voluptates velit totam ipsa tenetur">
+                                            <div class="entry-date">{{ event.date|date("d") }}
+                                                <span>{{ event.date|date("M") }} </span></div>
+                                        </a>
+                                    </div>
+                                    <div class="entry-c">
+                                        <div class="entry-title">
+                                            <h2><a href="#">{{ event.titre }}</a></h2>
+                                        </div>
+                                        <ul class="entry-meta clearfix">
+                                            <li><a href="#"><i class="icon-time"></i>{{ event.horaire|date("h:i") }}</a>
+                                            </li>
+                                            <li><a href="#"><i class="icon-map-marker2"></i>{{ event.lieu }}</a></li>
+                                        </ul>
+                                        <div class="entry-content">
+                                            <p>{{ event.presentation }}</p>
+                                            {% if not event.billeterie %}
+                                                <a href="#" class="btn btn-secondary" disabled="disabled">Pas de
+                                                    billeterie</a>
+                                            {% elseif  event.billeterie %}
+                                                <a href="{{ event.billeterie|raw }}"
+                                                   onclick="window.open(this.href); return false;"
+                                                   class="btn btn-primary"
+                                                   disabled="disabled">Billeterie</a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
 
-				</div>
+                            {% endfor %}
 
-			</div>
 
-		</section><!-- #content end -->
+                        </div>
+
+                        <div class="sidebar nobottommargin col_last">
+                            <div class="sidebar-widgets-wrap">
+
+                                <div class="widget clearfix">
+
+                                    <div class="widget clearfix">
+
+                                        <h4>Dernière musique</h4>
+                                        {% for music in musics %}
+                                            {{ music.embed|raw }}
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+                                <div class="widget clearfix">
+
+                                    <div class="widget clearfix">
+                                        <h4>Dernier articles</h4>
+
+
+                                    <div id="post-list-footer">
+
+                                        {% for article in articles %}
+                                            <div class="spost clearfix">
+                                                <div class="entry-image">
+                                                    <img src="{{ asset("imagesArticles/" ~ article.image) }}"
+                                                         class="petiteImage" alt="...">
+                                                </div>
+                                                <div class="entry-c">
+                                                    <div class="entry-title">
+                                                        <h4><a href="#">{{ article.titre }}</a></h4>
+                                                    </div>
+                                                    <ul class="entry-meta">
+                                                        <li>{{ article.date|date("d/M/Y") }}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        {% endfor %}
+                                    </div>
+
+                                </div>
+
+                                <div class="widget clearfix">
+
+                                    <h4>Dernière vidéo</h4>
+                                    {% for lastvideo in lastvideos %}
+                                        {{ lastvideo.embed|raw }}
+                                    {% endfor %}
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- #content end -->
+                        <!-- Pagination
+                        ============================================= -->
+
+                        <!-- .pager end -->
+
+                    </div>
+
+                </div>
+
+        </section><!-- #content end -->
 
     {% endblock %}

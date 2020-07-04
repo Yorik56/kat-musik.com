@@ -19,22 +19,19 @@ class MusicRepository extends ServiceEntityRepository
         parent::__construct($registry, Music::class);
     }
 
-    // /**
-    //  * @return Music[] Returns an array of Music objects
-    //  */
-    /*
-    public function findByExampleField($value)
+     /**
+      * @return Music[] Returns an array of Music objects
+      */
+
+    public function lastMusic()
     {
         return $this->createQueryBuilder('m')
-            ->andWhere('m.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('m.id', 'ASC')
-            ->setMaxResults(10)
+            ->setMaxResults(1)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+
 
     /*
     public function findOneBySomeField($value): ?Music
