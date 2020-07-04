@@ -21,14 +21,14 @@ class MusikController extends AbstractController
     public function musik()
     {
        $repo = $this->getDoctrine()->getRepository(Music::class);
-        $music = $repo->findAll();
-        $article = $this->getDoctrine()->getRepository(Article::class)->LastArticle();
+       $music = $repo->findAll();
+       $article = $this->getDoctrine()->getRepository(Article::class)->sidebarArticles();
 
 
         return $this->render('index/musik.html.twig', [
             'musics' => $music,
             'articles' => $article,
-            ]);
+        ]);
     }
 
 

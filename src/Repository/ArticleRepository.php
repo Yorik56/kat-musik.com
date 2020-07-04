@@ -19,18 +19,43 @@ class ArticleRepository extends ServiceEntityRepository
         parent::__construct($registry, Article::class);
     }
 
-     /**
+    /**
+     * @return Article[] Returns an array of Article objects
+     */
+
+    public function sidebarArticles()
+    {
+        return $this->createQueryBuilder('a')
+            ->setMaxResults(3)
+            ->orderBy('a.id','DESC')
+            ->getQuery()
+            ->getResult();
+    }
+
+    /**
      * @return Article[] Returns an array of Article objects
      */
 
     public function LastArticle()
     {
         return $this->createQueryBuilder('a')
-            ->setMaxResults(3)
+            ->setMaxResults(1)
+            ->orderBy('a.id','DESC')
             ->getQuery()
-            ->getResult()
-        ;
+            ->getResult();
     }
+
+    /**
+     * @return Article[] Returns an array of Article objects
+     */
+
+     public function Articles()
+     {
+         return $this->createQueryBuilder('a')
+             ->orderBy('a.id','DESC')
+             ->getQuery()
+             ->getResult();
+     }
 
 
     /*

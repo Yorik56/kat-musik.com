@@ -16,7 +16,7 @@ class BlogController extends AbstractController
     public function show(){
         
         $repo = $this->getDoctrine()->getRepository(Article::class);
-        $article = $repo->findAll();
+        $article = $this->getDoctrine()->getRepository(Article::class)->Articles();
         return $this->render('index/news.html.twig', [
             'articles' => $article]);
     }
