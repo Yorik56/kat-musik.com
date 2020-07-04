@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * @ORM\Entity(repositoryClass=ArticleRepository::class)
+ * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository", repositoryClass=ArticleRepository::class)
  * @Vich\Uploadable
  */
 class Article
@@ -48,9 +48,19 @@ class Article
     private $imageFile;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="datetime")
      */
     private $Date;
+
+    /**
+     * Article constructor.
+     * @throws \Exception
+     */
+    public function __construct()
+    {
+        $this->Date = new \DateTime('now');
+    }
+
 
     public function getId(): ?int
     {

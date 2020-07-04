@@ -2,27 +2,28 @@
 <html dir="ltr" lang="en-US">
 <head>
 
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="author" content="SemiColonWeb" />
-<!-- Document stylesheets
-	============================================= -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="SemiColonWeb"/>
+    <!-- Document stylesheets
+        ============================================= -->
     {% block stylesheets %}
 
         <link rel="icon" type="image/png" href="{{ asset('images_kat/Logo_Kat.png') }}">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i"
+              rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="{{ asset("css/bootstrap.css") }}" type="text/css"/>
         <link rel="stylesheet" href="{{ asset("style.css") }}" type="text/css"/>
         <link rel="stylesheet" href="{{ asset("css/dark.css") }}" type="text/css"/>
         <link rel="stylesheet" href="{{ asset("css/font-icons.css") }}" type="text/css"/>
         <link rel="stylesheet" href="{{ asset("css/animate.css") }}" type="text/css"/>
         <link rel="stylesheet" href="{{ asset("css/magnific-popup.css") }}" type="text/css"/>
-        <link rel="stylesheet" href="{{ asset("css/responsive.css") }}"  type="text/css"/>
+        <link rel="stylesheet" href="{{ asset("css/responsive.css") }}" type="text/css"/>
     {% endblock %}
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-	<!-- Document Title
-	============================================= -->
-	{% block title %}
+    <!-- Document Title
+    ============================================= -->
+    {% block title %}
 
         <title>Kat-musik.com</title>
 
@@ -31,83 +32,124 @@
 </head>
 <body class="stretched">
 
-    <!-- Document Wrapper
+<!-- Document Wrapper
+============================================= -->
+<div id="wrapper" class="clearfix">
+
+    {% block header %}
+    <!-- Header
+============================================= -->
+    <header id="header" class="transparent-header full-header dark" data-sticky-class="not-dark">
+
+        <div id="header-wrap">
+
+            <div class="container clearfix">
+
+                <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+                <!-- Logo
+                ============================================= -->
+                <div id="logo">
+                    <a href="{{ path('index') }}" class="standard-logo"
+                       data-dark-logo="{{ asset('images_kat/Logo_Kat.png') }}"><img
+                                src="{{ asset('images/logo.png') }}" alt="Canvas Logo"></a>
+                    <a href="{{ path('index') }}" class="retina-logo"
+                       data-dark-logo="{{ asset('images/logo-dark@2x.png') }}"><img
+                                src="{{ asset('images/logo@2x.png') }}" alt="Canvas Logo"></a>
+                </div><!-- #logo end -->
+
+                <!-- Primary Navigation
+                ============================================= -->
+                <nav id="primary-menu" class="not-dark">
+
+                    <ul>
+                        <li><a href="{{ path('index') }}">
+                                <div class="Menu-links">aKeuil</div>
+                            </a></li>
+                        <li><a href="{{ path('musik') }}">
+                                <div class="Menu-links">musiK</div>
+                            </a></li>
+                        <li class="mega-menu"><a href="{{ path('video') }}">
+                                <div class="Menu-links">VidéoK</div>
+                            </a></li>
+                        <li class="mega-menu"><a href="{{ path('news') }}">
+                                <div class="Menu-links">News</div>
+                            </a></li>
+                        <li class="mega-menu"><a href="{{ path('liveagenda') }}">
+                                <div class="Menu-links">Live Agenda</div>
+                            </a></li>
+                        <li class="mega-menu"><a href="#">
+                                <div class="Menu-links">Contact</div>
+                            </a>
+                            <div class="mega-menu-content style-2 clearfix">
+                                <ul class="mega-menu-column col-lg-12">
+                                    <ul>
+                                        <li><a href="blog.html">
+                                                <div class="Contact-menu-list">Livre D'or</div>
+                                            </a></li>
+                                        <li><a href="blog-left-sidebar.html">
+                                                <div class="Contact-menu-list">Left Sidebar</div>
+                                            </a></li>
+                                        <li><a href="blog-both-sidebar.html">
+                                                <div class="Contact-menu-list">Both Sidebar</div>
+                                            </a></li>
+                                        <li><a href="blog-full-width.html">
+                                                <div class="Contact-menu-list">Full Width</div>
+                                            </a></li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mega-menu"><a href="#">
+                                <div class="Menu-links">BoutiK</div>
+                            </a></li>
+                    </ul>
+
+                </nav><!-- #primary-menu end -->
+
+            </div>
+
+        </div>
+
+    </header>
+</div>
+</body>
+</html>
+<!-- #header end -->
+{% endblock %}
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% for message in app.flashes('fail') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+
+    {% block body %}{% endblock %}
+<footer>
+    <ok>
+</footer>
+
+{% block javascripts %}
+    <!-- Go To Top
+============================================= -->
+    <div id="gotoTop" class="icon-angle-up"></div>
+
+    <!-- External JavaScripts
     ============================================= -->
-    <div id="wrapper" class="clearfix">
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/plugins.js') }}"></script>
 
-        {% block header %}
-                    <!-- Header
-            ============================================= -->
-            <header id="header" class="transparent-header full-header dark" data-sticky-class="not-dark">
+    <!-- Footer Scripts
+    ============================================= -->
+    <script src="{{ asset('js/functions.js') }}"></script>
 
-                <div id="header-wrap">
-
-                    <div class="container clearfix">
-
-                        <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
-
-                        <!-- Logo
-                        ============================================= -->
-                        <div id="logo">
-                            <a href="{{ path('index') }}" class="standard-logo" data-dark-logo="{{ asset('images_kat/Logo_Kat.png') }}"><img src="{{ asset('images/logo.png') }}" alt="Canvas Logo"></a>
-                            <a href="{{ path('index') }}" class="retina-logo" data-dark-logo="{{ asset('images/logo-dark@2x.png') }}"><img src="{{ asset('images/logo@2x.png') }}" alt="Canvas Logo"></a>
-                        </div><!-- #logo end -->
-
-                        <!-- Primary Navigation
-                        ============================================= -->
-                        <nav id="primary-menu" class="not-dark">
-
-                            <ul>
-                                <li><a href="{{ path('index') }}"><div class="Menu-links">aKeuil</div></a></li>
-                                <li><a href="{{ path('musik') }}"><div class="Menu-links">musiK</div></a></li>
-                                <li class="mega-menu"><a href="{{ path('video') }}"><div class="Menu-links">VidéoK</div></a></li>
-                                <li class="mega-menu"><a href="{{ path('news') }}"><div class="Menu-links">News</div></a></li>
-                                <li class="mega-menu"><a href="{{ path('liveagenda') }}"><div class="Menu-links">Live Agenda</div></a></li>
-                                <li class="mega-menu"><a href="#"><div class="Menu-links">Contact</div></a>
-								    <div class="mega-menu-content style-2 clearfix">
-                                        <ul class="mega-menu-column col-lg-12">
-                                                <ul>
-                                                    <li><a href="blog.html"><div class="Contact-menu-list">Livre D'or</div></a></li>
-                                                    <li><a href="blog-left-sidebar.html"><div class="Contact-menu-list">Left Sidebar</div></a></li>
-                                                    <li><a href="blog-both-sidebar.html"><div class="Contact-menu-list">Both Sidebar</div></a></li>
-                                                    <li><a href="blog-full-width.html"><div class="Contact-menu-list">Full Width</div></a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="mega-menu"><a href="#"><div class="Menu-links">BoutiK</div></a></li>
-                            </ul>
-
-                        </nav><!-- #primary-menu end -->
-
-                    </div>
-
-                </div>
-
-            </header><!-- #header end -->
-        {% endblock %}
-        
-            {% block body %}{% endblock %}
-        <footer>
-            <ok>
-        </footer>
-    </div>
-        {% block javascripts %}
-                    <!-- Go To Top
-            ============================================= -->
-            <div id="gotoTop" class="icon-angle-up"></div>
-
-            <!-- External JavaScripts
-            ============================================= -->
-            <script src="{{ asset('js/jquery.js') }}"></script>
-            <script src="{{ asset('js/plugins.js') }}"></script>
-
-            <!-- Footer Scripts
-            ============================================= -->
-            <script src="{{ asset('js/functions.js') }}"></script>
-
-        {% endblock %}
+{% endblock %}
 
 </body>
 
