@@ -23,7 +23,7 @@ class LiveAgendaController extends AbstractController
         $repo = $this->getDoctrine()->getRepository(Event::class);
         $event = $repo->findAll();
         $music = $this->getDoctrine()->getRepository(Music::class)->LastMusic();
-        $article = $this->getDoctrine()->getRepository(Article::class)->LastArticle();
+        $article = $this->getDoctrine()->getRepository(Article::class)->sidebarArticles();
         $lastvideo = $this->getDoctrine()->getRepository(Video::class)->LastVideo();
         return $this->render('index/liveagenda.html.twig', [
             'events' => $event,
