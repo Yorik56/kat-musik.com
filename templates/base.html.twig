@@ -13,6 +13,7 @@
               rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="{{ asset("css/bootstrap.css") }}" type="text/css"/>
         <link rel="stylesheet" href="{{ asset("style.css") }}" type="text/css"/>
+        <link rel="stylesheet" href="{{ asset("kat-style.css") }}" type="text/css"/>
         <link rel="stylesheet" href="{{ asset("css/dark.css") }}" type="text/css"/>
         <link rel="stylesheet" href="{{ asset("css/font-icons.css") }}" type="text/css"/>
         <link rel="stylesheet" href="{{ asset("css/animate.css") }}" type="text/css"/>
@@ -47,16 +48,12 @@
 
                 <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
 
-                <!-- Logo
-                ============================================= -->
-                <div id="logo">
-                    <a href="{{ path('index') }}" class="standard-logo"
-                       data-dark-logo="{{ asset('images_kat/Logo_Kat.png') }}"><img
-                                src="{{ asset('images/logo.png') }}" alt="Canvas Logo"></a>
-                    <a href="{{ path('index') }}" class="retina-logo"
-                       data-dark-logo="{{ asset('images/logo-dark@2x.png') }}"><img
-                                src="{{ asset('images/logo@2x.png') }}" alt="Canvas Logo"></a>
-                </div><!-- #logo end -->
+                        <!-- Logo
+                        ============================================= -->
+                        <div id="logo">
+                            <a href="{{ path('index') }}" class="standard-logo" data-dark-logo="{{ asset('images_kat/Logo_Kat.png') }}"><img src="{{ asset('images_kat/Logo_Kat1.png') }}" alt="Canvas Logo"></a>
+                            <a href="{{ path('index') }}" class="retina-logo" data-dark-logo="{{ asset('images/logo-dark@2x.png') }}"><img src="{{ asset('images/logo@2x.png') }}" alt="Canvas Logo"></a>
+                        </div><!-- #logo end -->
 
                 <!-- Primary Navigation
                 ============================================= -->
