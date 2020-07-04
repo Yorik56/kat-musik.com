@@ -5,5 +5,8 @@
 	Overwriting Default Theme Styles for Better Handling Updates
 -----------------------------------------------------------------*/
 
-
+.petiteImage{
+    width: 48px;
+    height: 48px;
+}
 
