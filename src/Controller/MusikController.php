@@ -22,7 +22,7 @@ class MusikController extends AbstractController
     {
        $repo = $this->getDoctrine()->getRepository(Music::class);
         $music = $repo->findAll();
-        $article = $this->getDoctrine()->getRepository(Article::class)->LastArticle();
+        $article = $this->getDoctrine()->getRepository(Article::class)->sidebarArticles();
         $lastvideo = $this->getDoctrine()->getRepository(Video::class)->LastVideo();
         $nextconcert = $this->getDoctrine()->getRepository(Event::class)->NextConcert();
         return $this->render('index/musik.html.twig', [
@@ -48,7 +48,7 @@ class MusikController extends AbstractController
         $repo = $this->getDoctrine()->getRepository(Video::class);
         $video = $repo->findAll();
         $music = $this->getDoctrine()->getRepository(Music::class)->LastMusic();
-        $article = $this->getDoctrine()->getRepository(Article::class)->LastArticle();
+        $article = $this->getDoctrine()->getRepository(Article::class)->sidebarArticles();
         $nextconcert = $this->getDoctrine()->getRepository(Event::class)->NextConcert();
         return $this->render('index/video.html.twig', [
             'videos' => $video,
