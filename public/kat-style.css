@@ -48,13 +48,12 @@
 @media screen and (min-width: 975px) {
 
     #page-title{
-        /* margin-top:-100px; */
+        height:683px;
     }
 
     #header.transparent-header + #page-title.page-title-parallax{
+        background-color:black;
         width:100%;
-        margin-top:-100px;
-        height:683px;
     }
 
     #page-title-mobile.page-title-parallax-mobile{
