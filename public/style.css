@@ -575,7 +575,6 @@ span.middot {
 	background-color: transparent;
 	background-attachment: fixed;
 	background-position: 50% 0;
-	background-repeat: no-repeat;
 	overflow: hidden;
 	will-change: transform;
 }
