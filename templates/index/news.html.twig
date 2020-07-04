@@ -34,7 +34,9 @@
 							{{ article.Titre }}
 							{{ article.SousTitre }}
 							{{ article.Texte|raw }}
-							{{ article.image }}
+							<img src="{{ asset("imagesArticles/" ~ article.image) }}" class="card-img-top image-menu" alt="...">
+							{{ article.date|date("d/mmmm/Y") }}	
+			
 						{% endfor %}
 						</div>
 
