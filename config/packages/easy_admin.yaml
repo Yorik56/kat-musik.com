@@ -11,14 +11,13 @@ easy_admin:
                     - { property: 'SousTitre'}
                     - { property: 'Texte'}
                     - { property: 'image', type: 'image', base_path: 'imagesArticles' }
-                    - { property: 'Date' }
+                    - { property: 'Date', type: 'date' }
             form:
                 fields:
                     - { property: 'Titre'}
                     - { property: 'SousTitre'}
                     - { property: 'Texte', type: 'fos_ckeditor'}
                     - { property: 'imageFile', type: 'file', base_path: 'imagesArticles' }
-                    - { property: 'Date' }
         Music:
             class: App\Entity\Music
             list:
@@ -26,8 +25,18 @@ easy_admin:
                     - { property: 'Titre'}
             form:
                 fields:
-                    - { property: 'Embed'}
                     - { property: 'Titre'}
+                    - { property: 'Embed'}
+
+        Video:
+            class: App\Entity\Video
+            list:
+                fields:
+                    - { property: 'Titre'}
+            form:
+                fields:
+                    - { property: 'Titre'}
+                    - { property: 'Embed'}
         Envent:
             class: App\Entity\Event
             list:
@@ -48,6 +57,23 @@ easy_admin:
                     - { property: 'Presentation' }
                     - { property: 'Info'}
                     - { property: 'Billeterie'}
+        Commentaire:
+            class: App\Entity\Commentaire
+            list:
+                fields:
+                    - { property: 'pseudo'}
+                    - { property: 'DateTime' }
+                    - { property: 'Commentaire' }
+                    - { property: 'Valide' }
+                    - { property: 'Email' }
+            form:
+                fields:
+                    - { property: 'pseudo'}
+                    - { property: 'DateTime' }
+                    - { property: 'Commentaire',  type: 'fos_ckeditor' }
+                    - { property: 'Valide' }
+                    - { property: 'Email' }
+
     design:
         form_theme:
             - '@EasyAdmin/form/bootstrap_4.html.twig'

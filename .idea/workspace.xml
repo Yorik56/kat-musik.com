@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d54c75e-7684-40e9-8c16-d7ee76b45611" name="Default Changelist" comment="" />
+    <list default="true" id="6d54c75e-7684-40e9-8c16-d7ee76b45611" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kat-musik.com.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kat-musik.com.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/InscriptionType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,6 +128,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
       <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1dOrTDyy0ybfymeMGiF7qHcHwfK" />
@@ -122,8 +142,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/security" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -147,6 +168,11 @@
       <workItem from="1592552248672" duration="13813000" />
       <workItem from="1592649161199" duration="5759000" />
       <workItem from="1592663609148" duration="4261000" />
+      <workItem from="1592812676276" duration="10906000" />
+      <workItem from="1592837437196" duration="15440000" />
+      <workItem from="1592904002639" duration="615000" />
+      <workItem from="1593769172569" duration="73000" />
+      <workItem from="1593769252827" duration="15983000" />
     </task>
     <servers />
   </component>
@@ -154,26 +180,48 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="861" y="261" key="#com.intellij.ide.util.MemberChooser" timestamp="1592563252370">
+    <state x="-1351" y="235" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593779187797">
+      <screen x="-1842" y="0" width="1458" height="864" />
+    </state>
+    <state x="-1351" y="235" key="#com.intellij.fileTypes.FileTypeChooser/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1593779187797" />
+    <state x="861" y="261" key="#com.intellij.ide.util.MemberChooser" timestamp="1593790469106">
       <screen x="62" y="0" width="1986" height="1152" />
     </state>
-    <state x="861" y="261" key="#com.intellij.ide.util.MemberChooser/62.0.1986.1152/-1842.0.1458.864@62.0.1986.1152" timestamp="1592563252370" />
-    <state x="689" y="249" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592667386652">
-      <screen x="62" y="0" width="1986" height="1152" />
+    <state x="-1255" y="196" key="#com.intellij.ide.util.MemberChooser/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1592817255105" />
+    <state x="861" y="261" key="#com.intellij.ide.util.MemberChooser/62.0.1986.1152/-1842.0.1458.864@62.0.1986.1152" timestamp="1593790469106" />
+    <state x="-1382" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593779502619">
+      <screen x="-1842" y="0" width="1458" height="864" />
     </state>
-    <state x="-1382" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1592393466081" />
+    <state x="-1382" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1593779502619" />
     <state x="689" y="249" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/62.0.1986.1152/-1842.0.1458.864@62.0.1986.1152" timestamp="1592667386652" />
+    <state x="744" y="334" key="FileChooserDialogImpl" timestamp="1592904016556">
+      <screen x="62" y="0" width="1986" height="1152" />
+    </state>
+    <state x="744" y="334" key="FileChooserDialogImpl/62.0.1986.1152/-1842.0.1458.864@62.0.1986.1152" timestamp="1592904016556" />
+    <state x="-1604" y="74" key="SettingsEditor" timestamp="1593769243617">
+      <screen x="-1842" y="0" width="1458" height="864" />
+    </state>
+    <state x="-1604" y="74" key="SettingsEditor/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1593769243617" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1592393549369">
       <screen x="-1842" y="0" width="1458" height="864" />
     </state>
     <state width="498" height="446" key="SwitcherDM/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1592393549369" />
+    <state x="-1848" y="0" width="742" height="870" key="dock-window-1" timestamp="1592859823996">
+      <screen x="-1842" y="0" width="1458" height="864" />
+    </state>
+    <state x="-1848" y="0" width="742" height="870" key="dock-window-1/62.0.1986.1152/-1842.0.1458.864@62.0.1986.1152" timestamp="1592859823996" />
     <state x="-1419" y="164" width="611" height="536" key="find.popup" timestamp="1592393965818">
       <screen x="-1842" y="0" width="1458" height="864" />
     </state>
     <state x="-1419" y="164" width="611" height="536" key="find.popup/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1592393965818" />
-    <state x="-1450" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1592664544729">
+    <state x="-1371" y="65" key="refactoring.ChangeSignatureDialog" timestamp="1592818415102">
       <screen x="-1842" y="0" width="1458" height="864" />
     </state>
-    <state x="-1450" y="181" width="672" height="678" key="search.everywhere.popup/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1592664544729" />
+    <state x="-1371" y="65" key="refactoring.ChangeSignatureDialog/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1592818415102" />
+    <state x="-1450" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1593779194183">
+      <screen x="-1842" y="0" width="1458" height="864" />
+    </state>
+    <state x="-1450" y="181" width="672" height="678" key="search.everywhere.popup/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1593779194183" />
+    <state x="596" y="241" width="916" height="904" key="search.everywhere.popup/62.0.1986.1152/-1842.0.1458.864@62.0.1986.1152" timestamp="1592840442292" />
   </component>
 </project>

@@ -3,30 +3,33 @@
 namespace App\Controller;
 
 
-// use Doctrine\Common\Persistence\ObjectManager;
-// use Doctrine\ORM\EntityManagerInterface;
+
+use App\Entity\Article;
+use App\Entity\Event;
+use App\Entity\Music;
+use App\Entity\Video;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Twig\Environment;
 
-/**
- * @Route("/")
- */
+
+
 class MainController extends AbstractController
 {
 
     /**
-     * @Route("/", name="index" )
-     * @return Response
-     * Ce controller permet d'afficher la page d'accueil
+     * @Route("/", name="index")
      */
-    public function index(): Response
+    public function Index()
     {
 
         return $this->render('index/index.html.twig');
-
     }
+
+
+
+
+
+
+
 
 }
