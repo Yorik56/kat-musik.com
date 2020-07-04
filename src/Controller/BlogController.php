@@ -18,12 +18,10 @@ class BlogController extends AbstractController
      */
     public function show()
     {
-
-        $repo = $this->getDoctrine()->getRepository(Article::class);
         $music = $this->getDoctrine()->getRepository(Music::class)->LastMusic();
         $lastvideo = $this->getDoctrine()->getRepository(Video::class)->LastVideo();
         $nextconcert = $this->getDoctrine()->getRepository(Event::class)->NextConcert();
-        $article = $repo->findAll();
+        $article = $this->getDoctrine()->getRepository(Article::class)->Articles();
         return $this->render('index/news.html.twig', [
             'musics' => $music,
             'articles' => $article,

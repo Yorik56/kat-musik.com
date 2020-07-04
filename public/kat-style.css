@@ -1,13 +1,13 @@
 
 
 @media screen and (max-width: 974px) {
- #page-title.page-title-parallax{
+    #page-title.page-title-parallax{
         display:none;
     }
 
     #page-title-mobile.page-title-parallax-mobile{
         width:100%;
-        
+        height:683px;
     }
 
     #page-title-mobile.page-title-parallax-mobile h1 {
@@ -34,19 +34,26 @@
         color: #777;
         font-size: 18px;
     }
+    .parallax{
+        display: none;
+    }
+
+    .parallax-mobile{
+        width: 100%;
+        height:683px;
+    }
 
 }
 
 @media screen and (min-width: 975px) {
 
     #page-title{
-        /* margin-top:-100px; */
+        height:683px;
     }
 
     #header.transparent-header + #page-title.page-title-parallax{
+        background-color:black;
         width:100%;
-        margin-top:-100px;
-
     }
 
     #page-title-mobile.page-title-parallax-mobile{
@@ -56,9 +63,15 @@
     .mega-menu-content{
         display:none;
     }
+
+    .parallax-mobile{
+        display: none;
+    }
+
+    .parallax{
+        width: 100%;
+        height:683px;
+    }
+
 }
 
-.parallax{
-    height:683px;
-
-}
