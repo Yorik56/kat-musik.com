@@ -1,7 +1,7 @@
 
 
 @media screen and (max-width: 974px) {
-    #header.transparent-header + #page-title.page-title-parallax{
+ #page-title.page-title-parallax{
         display:none;
     }
 
@@ -38,8 +38,15 @@
 }
 
 @media screen and (min-width: 975px) {
+
+    #page-title{
+        /* margin-top:-100px; */
+    }
+
     #header.transparent-header + #page-title.page-title-parallax{
         width:100%;
+        margin-top:-100px;
+
     }
 
     #page-title-mobile.page-title-parallax-mobile{
