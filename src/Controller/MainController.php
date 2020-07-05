@@ -22,13 +22,14 @@ class MainController extends AbstractController
     public function Index()
     {
 
-       $repo = $this->getDoctrine()->getRepository(Music::class);
-       $music = $repo->findAll();
+       $video = $this->getDoctrine()->getRepository(Video::class)->LastVideo();
+       $music = $this->getDoctrine()->getRepository(Music::class)->lastMusic();
        $article = $this->getDoctrine()->getRepository(Article::class)->LastArticle();
 
         return $this->render('index/index.html.twig', [
             'musics' => $music,
             'articles' => $article,
+            'videos' => $video,
         ]);
     }
 
