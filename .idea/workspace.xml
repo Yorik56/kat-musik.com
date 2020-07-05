@@ -148,6 +148,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\kat-musik.com\templates\news" />
       <recent name="C:\xampp\htdocs\kat-musik.com\public\images_kat" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -177,7 +178,9 @@
       <workItem from="1593769172569" duration="73000" />
       <workItem from="1593769252827" duration="15983000" />
       <workItem from="1593856884313" duration="17963000" />
-      <workItem from="1593941788219" duration="9910000" />
+      <workItem from="1593941788219" duration="19478000" />
+      <workItem from="1593966004205" duration="5510000" />
+      <workItem from="1593973803709" duration="2657000" />
     </task>
     <servers />
   </component>
@@ -185,24 +188,25 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1351" y="235" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593779187797">
-      <screen x="-1842" y="0" width="1458" height="864" />
+    <state x="731" y="313" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593961588115">
+      <screen x="62" y="0" width="1986" height="1152" />
     </state>
     <state x="-1351" y="235" key="#com.intellij.fileTypes.FileTypeChooser/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1593779187797" />
-    <state x="861" y="261" key="#com.intellij.ide.util.MemberChooser" timestamp="1593864175902">
+    <state x="731" y="313" key="#com.intellij.fileTypes.FileTypeChooser/62.0.1986.1152/-1842.0.1458.864@62.0.1986.1152" timestamp="1593961588115" />
+    <state x="861" y="261" key="#com.intellij.ide.util.MemberChooser" timestamp="1593971332223">
       <screen x="62" y="0" width="1986" height="1152" />
     </state>
     <state x="-1255" y="196" key="#com.intellij.ide.util.MemberChooser/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1592817255105" />
-    <state x="861" y="261" key="#com.intellij.ide.util.MemberChooser/62.0.1986.1152/-1842.0.1458.864@62.0.1986.1152" timestamp="1593864175902" />
+    <state x="861" y="261" key="#com.intellij.ide.util.MemberChooser/62.0.1986.1152/-1842.0.1458.864@62.0.1986.1152" timestamp="1593971332223" />
     <state x="-1467" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1593881151366">
       <screen x="-1842" y="0" width="1458" height="864" />
     </state>
     <state x="-1467" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1593881151366" />
-    <state x="689" y="249" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593877191163">
+    <state x="689" y="249" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593963718008">
       <screen x="62" y="0" width="1986" height="1152" />
     </state>
     <state x="-1382" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/62.0.1986.1152/-1842.0.1458.864@-1842.0.1458.864" timestamp="1593779502619" />
-    <state x="689" y="249" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/62.0.1986.1152/-1842.0.1458.864@62.0.1986.1152" timestamp="1593877191163" />
+    <state x="689" y="249" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/62.0.1986.1152/-1842.0.1458.864@62.0.1986.1152" timestamp="1593963718008" />
     <state x="744" y="334" key="FileChooserDialogImpl" timestamp="1592904016556">
       <screen x="62" y="0" width="1986" height="1152" />
     </state>

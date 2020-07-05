@@ -1,10 +1,22 @@
 
+
 #content{
-    background-color:black;
+    background-color:#1a1a1a;
+}
+
+#primary-menu ul li > a {
+    
+    font-family: 'Finger Paint', cursive;
+
 }
 
 h3{
     font-size:44px;
+}
+
+.parallax span{
+    font-size: 22px;
+    font-weight: 300;
 }
 
 .présentation_kat{
@@ -13,6 +25,12 @@ h3{
     font-weight: bold;
     font-size: 20px;
     text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+.entry-image img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 974px) {
@@ -89,6 +107,24 @@ h3{
     }
 
 }
+.bd-accueil{
+    /* The image used */
+    background-image: url("images_kat/kat_background.jpg");
+        /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media screen and (max-width: 974px) {
+    .bd-accueil {
+        padding: 250px 0;
+        background-image: url('images_kat/kat_background.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
 
 .img-bd-music{
     /* The image used */
@@ -103,12 +139,7 @@ h3{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.img-bd-live{
-    /* The image used */
-    background-image: url("images_kat/bd-live.jpg");
 
-    /* Set a specific height */
-    height: 450px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -172,6 +203,12 @@ h3{
         font-size: 50px;
         text-transform: uppercase;
     }
+}
+
+.card-img-top.image-menu{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 
 
