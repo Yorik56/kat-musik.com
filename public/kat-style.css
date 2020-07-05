@@ -1,5 +1,20 @@
 
-/*css accueil*/
+#content{
+    background-color:black;
+}
+
+h3{
+    font-size:44px;
+}
+
+.présentation_kat{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
 @media screen and (max-width: 974px) {
     #page-title.page-title-parallax{
         display:none;
@@ -22,7 +37,7 @@
     }
 
     #page-title-mobile.page-title-parallax-mobile span {
-    font-size: 22px;
+        font-size: 22px;
     }
     #page-title-mobile.page-title-dark span {
         color: rgba(255,255,255,0.7);
@@ -75,16 +90,12 @@
 
 }
 
-
-
-
-
 .img-bd-music{
     /* The image used */
     background-image: url("images_kat/bd-guitare2.jpg");
 
     /* Set a specific height */
-   height: 450px;
+    height: 450px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -132,9 +143,9 @@
     background-size: cover;
 }
 
-    .titre-bd {
-        margin-top: 5em;
-    }
+.titre-bd {
+    margin-top: 5em;
+}
 
 @media screen and (min-width: 975px) {
     #page-blog h1 {
@@ -162,7 +173,5 @@
         text-transform: uppercase;
     }
 }
-
-
 
 
