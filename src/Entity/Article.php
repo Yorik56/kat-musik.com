@@ -72,8 +72,6 @@ class Article
     {
         $this->Date = new \DateTime('now');
         $this->commentaireArticles = new ArrayCollection();
-
-
     }
 
 
@@ -152,41 +150,5 @@ class Article
     {
         return $this->imageFile;
     }
-
-    /**
-     * @return Collection|CommentaireArticle[]
-     */
-    public function getCommentaireArticles(): Collection
-    {
-        return $this->commentaireArticles;
-    }
-
-    public function addCommentaireArticle(CommentaireArticle $commentaireArticle): self
-    {
-        if (!$this->commentaireArticles->contains($commentaireArticle)) {
-            $this->commentaireArticles[] = $commentaireArticle;
-            $commentaireArticle->setArticle($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCommentaireArticle(CommentaireArticle $commentaireArticle): self
-    {
-        if ($this->commentaireArticles->contains($commentaireArticle)) {
-            $this->commentaireArticles->removeElement($commentaireArticle);
-            // set the owning side to null (unless already changed)
-            if ($commentaireArticle->getArticle() === $this) {
-                $commentaireArticle->setArticle(null);
-            }
-        }
-
-        return $this;
-    }
-
-
-
-
-
 
 }

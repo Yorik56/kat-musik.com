@@ -27,6 +27,7 @@ class MusicRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('m')
             ->setMaxResults(1)
+            ->orderBy('m.id','DESC')
             ->getQuery()
             ->getResult()
         ;
