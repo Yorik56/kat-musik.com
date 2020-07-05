@@ -147,6 +147,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\kat-musik.com\public\images_kat" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\kat-musik.com\templates\security" />
     </key>
@@ -173,7 +176,8 @@
       <workItem from="1592904002639" duration="615000" />
       <workItem from="1593769172569" duration="73000" />
       <workItem from="1593769252827" duration="15983000" />
-      <workItem from="1593856884313" duration="16977000" />
+      <workItem from="1593856884313" duration="17963000" />
+      <workItem from="1593941788219" duration="6730000" />
     </task>
     <servers />
   </component>
