@@ -31,7 +31,7 @@ class Commentaire
     /**
      * @ORM\Column(type="string", length=600)
      */
-    private $Commentaire;
+    private $Content;
 
     /**
      * @ORM\Column(type="boolean", nullable=true)
@@ -45,6 +45,9 @@ class Commentaire
      * @ORM\Column(type="string", length=255)
      */
     private $Email;
+
+
+
 
     /**
      * Commentaire constructor.
@@ -87,17 +90,18 @@ class Commentaire
         return $this;
     }
 
-    public function getCommentaire(): ?string
+
+    public function getContent()
     {
-        return $this->Commentaire;
+        return $this->Content;
     }
 
-    public function setCommentaire(string $Commentaire): self
-    {
-        $this->Commentaire = $Commentaire;
 
-        return $this;
+    public function setContent($Content): void
+    {
+        $this->Content = $Content;
     }
+
 
     public function getValide(): ?bool
     {
@@ -122,4 +126,9 @@ class Commentaire
 
         return $this;
     }
+
+
+
+
+
 }
