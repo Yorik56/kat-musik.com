@@ -46,7 +46,7 @@ easy_admin:
                     - { property: 'Lieu'}
                     - { property: 'Titre' }
                     - { property: 'Presentation' }
-                    - { property: 'Billeterie'}
+                    - { property: 'Billeterie',  }
                     - { property: 'image', type: 'image', base_path: 'imagesArticles' }
             form:
                 fields:
@@ -55,7 +55,7 @@ easy_admin:
                     - { property: 'Lieu'}
                     - { property: 'Titre' }
                     - { property: 'Presentation' }
-                    - { property: 'Billeterie'}
+                    - { property: 'Billeterie', type_options: { block_name: 'custom_title' }}
                     - { property: 'imageFile', type: 'file', base_path: 'imagesArticles' }
         Commentaire:
             class: App\Entity\Commentaire
