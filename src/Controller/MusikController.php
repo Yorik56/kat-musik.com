@@ -25,7 +25,7 @@ class MusikController extends AbstractController
         $article = $this->getDoctrine()->getRepository(Article::class)->sidebarArticles();
         $lastvideo = $this->getDoctrine()->getRepository(Video::class)->LastVideo();
         $nextconcert = $this->getDoctrine()->getRepository(Event::class)->NextConcert();
-        return $this->render('index/musik.html.twig', [
+        return $this->render('index/music.html.twig', [
             'musics' => $music,
             'articles' => $article,
             'lastvideos' => $lastvideo,

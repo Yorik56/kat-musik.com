@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ArticleRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -53,12 +55,25 @@ class Article
     private $Date;
 
     /**
+     * @ORM\OneToMany(targetEntity=CommentaireArticle::class, mappedBy="Article", orphanRemoval=true)
+     */
+    private $commentaireArticles;
+
+
+
+
+
+
+    /**
      * Article constructor.
      * @throws \Exception
      */
     public function __construct()
     {
         $this->Date = new \DateTime('now');
+        $this->commentaireArticles = new ArrayCollection();
+
+
     }
 
 
@@ -137,4 +152,41 @@ class Article
     {
         return $this->imageFile;
     }
+
+    /**
+     * @return Collection|CommentaireArticle[]
+     */
+    public function getCommentaireArticles(): Collection
+    {
+        return $this->commentaireArticles;
+    }
+
+    public function addCommentaireArticle(CommentaireArticle $commentaireArticle): self
+    {
+        if (!$this->commentaireArticles->contains($commentaireArticle)) {
+            $this->commentaireArticles[] = $commentaireArticle;
+            $commentaireArticle->setArticle($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCommentaireArticle(CommentaireArticle $commentaireArticle): self
+    {
+        if ($this->commentaireArticles->contains($commentaireArticle)) {
+            $this->commentaireArticles->removeElement($commentaireArticle);
+            // set the owning side to null (unless already changed)
+            if ($commentaireArticle->getArticle() === $this) {
+                $commentaireArticle->setArticle(null);
+            }
+        }
+
+        return $this;
+    }
+
+
+
+
+
+
 }

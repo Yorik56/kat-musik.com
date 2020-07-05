@@ -2,14 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\CommentaireRepository;
+use App\Repository\CommentaireArticleRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity(repositoryClass=CommentaireRepository::class)
+ * @ORM\Entity(repositoryClass=CommentaireArticleRepository::class)
  */
-class Commentaire
+class CommentaireArticle
 {
     /**
      * @ORM\Id()
@@ -26,40 +25,28 @@ class Commentaire
     /**
      * @ORM\Column(type="datetime")
      */
-    private $DateTime;
+    private $CreatedAt;
 
     /**
-     * @ORM\Column(type="string", length=600)
+     * @ORM\Column(type="string", length=255)
      */
     private $Content;
 
     /**
-     * @ORM\Column(type="boolean", nullable=true)
+     * @ORM\Column(type="boolean")
      */
     private $Valide;
 
     /**
-     * @Assert\Email(
-     *     message = "L'email '{{ value }}' n'est pas valide."
-     * )
      * @ORM\Column(type="string", length=255)
      */
     private $Email;
 
-
-
-
     /**
-     * Commentaire constructor.
-     * @throws \Exception
+     * @ORM\ManyToOne(targetEntity=Article::class, inversedBy="commentaireArticles")
+     * @ORM\JoinColumn(nullable=false)
      */
-    public function __construct()
-    {
-        $this->DateTime = new \DateTime('now');
-        $this->Valide = false;
-
-    }
-
+    private $Article;
 
     public function getId(): ?int
     {
@@ -78,30 +65,29 @@ class Commentaire
         return $this;
     }
 
-    public function getDateTime(): ?\DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
     {
-        return $this->DateTime;
+        return $this->CreatedAt;
     }
 
-    public function setDateTime(\DateTimeInterface $DateTime): self
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
-        $this->DateTime = $DateTime;
+        $this->CreatedAt = $createdAt;
 
         return $this;
     }
 
-
-    public function getContent()
+    public function getContent(): ?string
     {
         return $this->Content;
     }
 
-
-    public function setContent($Content): void
+    public function setContent(string $Content): self
     {
         $this->Content = $Content;
-    }
 
+        return $this;
+    }
 
     public function getValide(): ?bool
     {
@@ -127,8 +113,15 @@ class Commentaire
         return $this;
     }
 
+    public function getArticcle(): ?Article
+    {
+        return $this->Articcle;
+    }
 
+    public function setArticcle(?Article $Articcle): self
+    {
+        $this->Articcle = $Articcle;
 
-
-
+        return $this;
+    }
 }

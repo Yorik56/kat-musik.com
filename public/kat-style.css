@@ -1,6 +1,6 @@
 
 #content{
-    background-color:black;
+    background-color: #1a1a1a;
 }
 
 h3{
@@ -89,6 +89,24 @@ h3{
     }
 
 }
+.bd-accueil{
+    /* The image used */
+    background-image: url("images_kat/kat_background.jpg");
+        /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media screen and (max-width: 974px) {
+    .bd-accueil {
+        padding: 250px 0;
+        background-image: url('images_kat/kat_background.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
 
 .img-bd-music{
     /* The image used */
@@ -172,6 +190,12 @@ h3{
         font-size: 50px;
         text-transform: uppercase;
     }
+}
+
+.card-img-top.image-menu{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 
 

@@ -46,8 +46,7 @@
                                         <div class="entry-content">
                                             <p>{{ event.presentation }}</p>
                                             {% if not event.billeterie %}
-                                                <a href="#" class="btn btn-secondary" disabled="disabled">Pas de
-                                                    billeterie</a>
+                                                <a href="#" class="btn btn-secondary" disabled="disabled">Gratuit</a>
                                             {% elseif  event.billeterie %}
                                                 <a href="{{ event.billeterie|raw }}"
                                                    onclick="window.open(this.href); return false;"

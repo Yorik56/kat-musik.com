@@ -55,7 +55,7 @@ easy_admin:
                     - { property: 'Lieu'}
                     - { property: 'Titre' }
                     - { property: 'Presentation' }
-                    - { property: 'Billeterie', type_options: { block_name: 'custom_title' }}
+                    - { property: 'Billeterie', label: 'Liens de la billeterie'}
                     - { property: 'imageFile', type: 'file', base_path: 'imagesArticles' }
         Commentaire:
             class: App\Entity\Commentaire

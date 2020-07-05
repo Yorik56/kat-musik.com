@@ -48,7 +48,7 @@
                                         <p>{{ article.Texte|slice(0, 250)|raw }}</p>
 
 
-                                        <a href="blog-single.html" class="more-link">Read More</a>
+                                        <a href="{{ path('article', {id: article.id }) }}" class="more-link" >Read More</a>
                                     </div>
                                 </div>
                             </div>

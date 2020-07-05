@@ -71,7 +71,7 @@ class ContactController extends AbstractController
             $this->addFlash('success', 'Commentaire soumis, en attente de validation');
             return $this->redirectToRoute('contact');
         }
-        return $this->render('index/contakt.html.twig', [
+        return $this->render('index/contact.html.twig', [
             'controller_name' => 'MainController',
             'commentaires' => $comm,
             "formcom" => $formcom->createView(),
