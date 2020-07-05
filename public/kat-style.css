@@ -1,5 +1,20 @@
 
-/*css accueil*/
+#content{
+    background-color:black;
+}
+
+h3{
+    font-size:44px;
+}
+
+.présentation_kat{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
 @media screen and (max-width: 974px) {
     #page-title.page-title-parallax{
         display:none;
@@ -75,6 +90,9 @@
 
 }
 
+.postcontent{
+    width:100%;
+}
 
 
 
