@@ -93,12 +93,12 @@ class Event
         return $this;
     }
 
-    public function getHoraire(): ?object
+    public function getHoraire(): ?\DateTimeInterface
     {
         return $this->Horaire;
     }
 
-    public function setHoraire(?object  $Horaire): self
+    public function setHoraire(?\DateTimeInterface $Horaire): self
     {
         $this->Horaire = $Horaire;
 
@@ -140,9 +140,6 @@ class Event
 
         return $this;
     }
-
-
-
 
     public function getImage(): ?string
     {

@@ -129,10 +129,7 @@
                                          alt="Standard Post with Image">
                                 </a>
                             </div>
-                            <div class="entry-c">
-                                <div class="entry-title">
-                                    <h2><a href="blog-single.html">This is a Standard post with a Preview Image</a></h2>
-                                </div>
+                            {% for article in articles %}
                                 <div class="entry-c">
                                     <div class="entry-title">
                                         <h1>Dernière News - {{ article.Titre }}</h1>

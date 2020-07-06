@@ -74,7 +74,6 @@ class Article
         $this->commentaireArticles = new ArrayCollection();
     }
 
-
     public function getId(): ?int
     {
         return $this->id;
@@ -149,6 +148,37 @@ class Article
     public function getImageFile()
     {
         return $this->imageFile;
+    }
+
+    /**
+     * @return Collection|CommentaireArticle[]
+     */
+    public function getCommentaireArticles(): Collection
+    {
+        return $this->commentaireArticles;
+    }
+
+    public function addCommentaireArticle(CommentaireArticle $commentaireArticle): self
+    {
+        if (!$this->commentaireArticles->contains($commentaireArticle)) {
+            $this->commentaireArticles[] = $commentaireArticle;
+            $commentaireArticle->setArticle($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCommentaireArticle(CommentaireArticle $commentaireArticle): self
+    {
+        if ($this->commentaireArticles->contains($commentaireArticle)) {
+            $this->commentaireArticles->removeElement($commentaireArticle);
+            // set the owning side to null (unless already changed)
+            if ($commentaireArticle->getArticle() === $this) {
+                $commentaireArticle->setArticle(null);
+            }
+        }
+
+        return $this;
     }
 
 }

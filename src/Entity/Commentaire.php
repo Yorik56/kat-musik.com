@@ -60,7 +60,6 @@ class Commentaire
 
     }
 
-
     public function getId(): ?int
     {
         return $this->id;
@@ -90,25 +89,24 @@ class Commentaire
         return $this;
     }
 
-
-    public function getContent()
+    public function getContent(): ?string
     {
         return $this->Content;
     }
 
-
-    public function setContent($Content): void
+    public function setContent(string $Content): self
     {
         $this->Content = $Content;
-    }
 
+        return $this;
+    }
 
     public function getValide(): ?bool
     {
         return $this->Valide;
     }
 
-    public function setValide(bool $Valide): self
+    public function setValide(?bool $Valide): self
     {
         $this->Valide = $Valide;
 

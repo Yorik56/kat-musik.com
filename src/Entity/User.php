@@ -61,13 +61,8 @@ class User implements UserInterface
         return (string) $this->email;
     }
 
-    /**
-     * @see UserInterface
-     */
-    public function getRoles() {
-        if (empty($this->roles)) {
-            return ['ROLE_ADMIN'];
-        }
+    public function getRoles(): ?array
+    {
         return $this->roles;
     }
 
@@ -78,12 +73,9 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * @see UserInterface
-     */
     public function getPassword(): ?string
     {
-        return  $this->password;
+        return $this->password;
     }
 
     public function setPassword(string $password): self

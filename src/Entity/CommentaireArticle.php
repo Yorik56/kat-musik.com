@@ -47,6 +47,16 @@ class CommentaireArticle
      * @ORM\JoinColumn(nullable=false)
      */
     private $Article;
+    /**
+     * CommentaireArticle constructor.
+     * @param $CreatedAt
+     * @throws \Exception
+     */
+
+    // public function __construct($CreatedAt)
+    // {
+    //     $this->CreatedAt =  new \DateTime('now');
+    // }
 
     public function getId(): ?int
     {
@@ -70,9 +80,9 @@ class CommentaireArticle
         return $this->CreatedAt;
     }
 
-    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    public function setCreatedAt(\DateTimeInterface $CreatedAt): self
     {
-        $this->CreatedAt = $createdAt;
+        $this->CreatedAt = $CreatedAt;
 
         return $this;
     }
@@ -121,6 +131,18 @@ class CommentaireArticle
     public function setArticcle(?Article $Articcle): self
     {
         $this->Articcle = $Articcle;
+
+        return $this;
+    }
+
+    public function getArticle(): ?Article
+    {
+        return $this->Article;
+    }
+
+    public function setArticle(?Article $Article): self
+    {
+        $this->Article = $Article;
 
         return $this;
     }
